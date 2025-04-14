@@ -4,9 +4,9 @@ from data import *
 import json
 from flask_cors import CORS
 
-CORS(app)
-
 app = Flask(__name__)
+
+CORS(app)
 
 @app.errorhandler(Exception)
 def handle_exception(e):
