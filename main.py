@@ -64,11 +64,11 @@ def get_by_secType(sec_Type):
 @app.route("/pokemons", methods=["POST"])
 def create_pokemon():
     new_poke = request.json
+    print(new_poke)
     required_fields = ["id", "name", "clasificacion", "primtip", "segTip", "image"]
     if not all(field in new_poke for field in required_fields):
         return jsonify({"error": "Datos inválidos. Debe incluir todos los datos necesarios"}), 400
     ghost_pokemons.append(new_poke)
-    print(new_poke)
     return jsonify({"message": "Pokémon creado exitosamente."}), 201
 
 #METODO PUT
