@@ -68,6 +68,7 @@ def create_pokemon():
     if not all(field in new_poke for field in required_fields):
         return jsonify({"error": "Datos inválidos. Debe incluir todos los datos necesarios"}), 400
     ghost_pokemons.append(new_poke)
+    print(new_poke)
     return jsonify({"message": "Pokémon creado exitosamente."}), 201
 
 #METODO PUT
