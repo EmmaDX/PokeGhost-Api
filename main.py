@@ -63,7 +63,6 @@ def get_by_secType(sec_Type):
 #METODO POST
 @app.route("/pokemons", methods=["POST"])
 def create_pokemon():
-    def create_pokemon():
     new_poke = request.json
     print("Datos recibidos:", new_poke)  # Imprime los datos recibidos para depuración
     
