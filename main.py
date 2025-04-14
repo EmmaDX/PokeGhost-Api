@@ -2,6 +2,9 @@ from flask import Flask, jsonify, request, Response
 from collections import OrderedDict
 from data import *
 import json
+from flask_cors import CORS
+
+CORS(app)
 
 app = Flask(__name__)
 
